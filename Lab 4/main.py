@@ -237,7 +237,7 @@ def run_three_room_example():
     agent = SimpleReflexAgent()
     # make room 0 and 2 dirty, room 1 clean (demonstration)
     env = NRoomVacuumEnvironment(agent=agent, n=3, initial_dirty=[0, 2], delay_seconds=0)
-    env.max_steps = 50
+    env.max_steps = 20
     env.execute_all()
     env.show_rooms()
 
@@ -248,7 +248,7 @@ def run_n_room_example(n=5):
     initial_dirty = [i for i in range(n) if random.random() < 0.5]
     agent = ModelBasedReflexAgent(n_rooms=n, initial_model=None, sensors_enabled=True)
     env = NRoomVacuumEnvironment(agent=agent, n=n, initial_dirty=initial_dirty, delay_seconds=0)
-    env.max_steps = 200
+    env.max_steps = 25
     env.execute_all()
     env.show_rooms()
 
