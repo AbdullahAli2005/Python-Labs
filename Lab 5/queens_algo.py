@@ -1,3 +1,5 @@
+# backtracking approach 
+
 N = 8  # Size of chessboard (8x8)
 
 def print_solution(board):
